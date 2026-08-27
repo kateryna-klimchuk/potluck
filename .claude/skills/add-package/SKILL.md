@@ -16,3 +16,6 @@ description: Add a new workspace package or app to the monorepo (apps/* or packa
 5. Run `bun install`, then `bun run check`.
 6. Add at least one `*.test.ts` under `src/`.
 7. If the package introduces a new technology, write an ADR first (`/write-adr`).
+
+## Git
+Do not `git add` or `git commit` the result. Show the file(s) to the user and wait for explicit approval before any git operation.

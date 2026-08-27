@@ -11,3 +11,6 @@ description: Record an architecture decision in docs/adr/ using the ADR template
 4. Status is `Proposed` unless the user explicitly accepts it in the conversation, then `Accepted`.
 5. ADRs are immutable once accepted. To change a decision, write a new ADR and mark the old one `Superseded by ADR-NNNN`.
 6. If the decision adds a dependency, follow `/add-package` after the ADR.
+
+## Git
+Do not `git add` or `git commit` the result. Show the file(s) to the user and wait for explicit approval before any git operation.

@@ -11,3 +11,6 @@ description: Create a new Product Requirement Document in docs/prd/ from the tem
 4. Keep it concise — a PRD is a decision aid, not a novel. Leave real open questions in "Open questions"; never leave "TBD" in requirements.
 5. Set Status to `Draft`, Date to today, Owner to the user.
 6. If the PRD implies an architectural choice, suggest running `/write-adr` next.
+
+## Git
+Do not `git add` or `git commit` the result. Show the file(s) to the user and wait for explicit approval before any git operation.

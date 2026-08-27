@@ -21,3 +21,7 @@ Bun-workspaces monorepo. React 19 + Vite + Tailwind v4 web app, shared TypeScrip
 - Biome is the single formatter/linter — don't add ESLint/Prettier.
 - New technology or cross-cutting pattern → write an ADR first. New feature scope → PRD.
 - Tests live next to source as `*.test.ts(x)` and run with `bun test`.
+
+## Git rules
+- **Never run `git add`, `git commit`, or `git push` without explicit approval from the user in the current conversation.** Finish the work, run `bun run check`, then show what changed and ask before staging or committing.
+- **Commit message format:** title only, no body, all lowercase, Conventional Commits prefix: `feat:`, `fix:`, `docs:`, `chore:`. Example: `docs: add git approval rule`.
