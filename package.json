@@ -12,7 +12,8 @@
     "typecheck": "bun run --filter '*' typecheck",
     "lint": "biome check .",
     "format": "biome format --write .",
-    "check": "bun run lint && bun run typecheck && bun test"
+    "check": "bun run lint && bun run typecheck && bun test && bun run test:e2e",
+    "test:e2e": "bun run --filter @potluck/web test:e2e"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.0",

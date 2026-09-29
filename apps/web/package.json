@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "typecheck": "tsc -p tsconfig.json"
+    "typecheck": "tsc -p tsconfig.json",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@potluck/ui": "workspace:*",
@@ -15,6 +16,8 @@
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.63.0",
     "@potluck/config": "workspace:*",
     "@tailwindcss/vite": "^4.1.0",
     "@types/react": "^19.1.0",

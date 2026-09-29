@@ -1,0 +1,40 @@
+/*
+ * Design tokens (ADR-0002).
+ * Layer 1: semantic CSS variables with light-mode values.
+ * Layer 2: Tailwind @theme mapping so utilities like bg-surface, text-fg-muted,
+ * bg-accent and rounded-card exist. Components use only these utilities for
+ * colour, font family and named radii, never raw palette classes.
+ * Dark mode later: add a [data-theme="dark"] block redefining the variables.
+ */
+:root {
+  --bg: #fbf8f3;
+  --surface: #ffffff;
+  --surface-muted: #f3eee6;
+  --border: #e6ded2;
+  --fg: #2b2520;
+  --fg-muted: #6f655b;
+  --accent: #ad4718;
+  --accent-hover: #8f3a14;
+  --accent-fg: #ffffff;
+  --accent-soft: #fbe8dd;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-border: var(--border);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-fg: var(--accent-fg);
+  --color-accent-soft: var(--accent-soft);
+
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+
+  --radius-card: 1rem;
+  --radius-button: 0.5rem;
+}

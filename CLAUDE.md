@@ -12,7 +12,9 @@ Bun-workspaces monorepo. React 19 + Vite + Tailwind v4 web app, shared TypeScrip
 ## Commands
 - `bun install`
 - `bun run dev` — start web app
-- `bun run check` — lint (Biome) + typecheck + tests. Run before claiming work is done.
+- `bun run check` — lint (Biome) + typecheck + unit tests + Playwright e2e. Run before claiming work is done.
+- `bunx playwright install chromium` — once per machine, needed by `bun run check`.
+- `bun run test:e2e` — Playwright only (`apps/web/e2e/*.e2e.ts`).
 - `bun test`
 
 ## Conventions
@@ -20,7 +22,8 @@ Bun-workspaces monorepo. React 19 + Vite + Tailwind v4 web app, shared TypeScrip
 - Strict TypeScript; no `any` without a comment.
 - Biome is the single formatter/linter — don't add ESLint/Prettier.
 - New technology or cross-cutting pattern → write an ADR first. New feature scope → PRD.
-- Tests live next to source as `*.test.ts(x)` and run with `bun test`.
+- Unit tests live next to source as `*.test.ts(x)` and run with `bun test`. UI behaviour is tested with Playwright in `apps/web/e2e/*.e2e.ts` (ADR-0003); no simulated-DOM component tests.
+- Colours, font family and named radii come from tokens in `packages/ui/src/theme.css` (ADR-0002): use `bg-surface`, `text-fg-muted`, `bg-accent`, `rounded-card`; never raw palette classes like `bg-zinc-*`.
 
 ## Git rules
 - **Never run `git add`, `git commit`, or `git push` without explicit approval from the user in the current conversation.** Finish the work, run `bun run check`, then show what changed and ask before staging or committing.
