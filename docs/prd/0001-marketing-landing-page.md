@@ -1,9 +1,9 @@
 # PRD-0001: Marketing landing page
 
-- **Status:** Draft
+- **Status:** Shipped
 - **Owner:** Kateryna Klimchuk
 - **Date:** 2026-09-29
-- **Related ADRs:** ADR-0001 (monorepo with Bun, React, Tailwind)
+- **Related ADRs:** ADR-0001 (monorepo), ADR-0002 (design tokens), ADR-0003 (Playwright tests), ADR-0004 (GitHub Pages deployment)
 
 ## Problem
 Potluck is a shared-budget app: people who travel, live, celebrate, or shop together pool money into a budget everyone can see and spend from. Nothing about the product exists yet, so there is nowhere to explain what Potluck does or to build early interest. We need a public page that tells visitors what Potluck is and what they will be able to do with it, before the signed-in product (dashboard, budgets, invites) is built.
@@ -55,7 +55,10 @@ Before launch there is no traffic, so metrics are qualitative and internal:
 - Once a waitlist or sign-up exists (later PRD), CTA click-through becomes the primary metric.
 
 ## Open questions
-- Final wording of the hero pitch and subline (draft copy will be proposed in the implementation).
-- Visual identity: colours, logo, and font are undecided; the first version uses the current neutral zinc palette.
-- Whether "Coming soon" should be an inline message under the button or a modal — decide during implementation, both satisfy requirement 2.
-- Do we want a public URL and hosting before the dashboard exists? If yes, a hosting/deployment ADR is needed.
+- Final wording of the hero pitch and subline; the shipped copy is a first draft.
+- Visual identity: colours, logo, and font are provisional (ADR-0002 palette, system font).
+
+## Decisions made during implementation
+- "Coming soon" is an inline status message under each button, not a modal.
+- Hosted at https://kateryna-klimchuk.github.io/potluck/ via GitHub Pages (ADR-0004).
+- Tests are Playwright browser tests only, including an axe WCAG AA scan (ADR-0003).

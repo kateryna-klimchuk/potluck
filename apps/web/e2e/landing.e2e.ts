@@ -67,7 +67,7 @@ test("pricing says free during early access", async ({ page }) => {
 
 test("FAQ has between four and six questions", async ({ page }) => {
   const section = page.getByRole("region", { name: /faq|questions/i });
-  const count = await section.getByRole("heading", { level: 3 }).count();
+  const count = await section.locator("dt").count();
   expect(count).toBeGreaterThanOrEqual(4);
   expect(count).toBeLessThanOrEqual(6);
 });

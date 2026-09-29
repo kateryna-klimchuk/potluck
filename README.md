@@ -1,6 +1,8 @@
 # Potluck
 
-Monorepo built on Bun, React, and Tailwind.
+Shared budgets for the things you do together. Monorepo built on Bun, React, and Tailwind.
+
+Live: https://kateryna-klimchuk.github.io/potluck/ (deployed from `main` by GitHub Actions).
 
 ```sh
 bun install

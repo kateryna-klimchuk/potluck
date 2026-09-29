@@ -29,9 +29,7 @@ export function Faq() {
       <dl className="mx-auto max-w-3xl divide-y divide-border">
         {faqs.map((item) => (
           <div key={item.q} className="py-6">
-            <dt>
-              <h3 className="text-lg font-semibold text-fg">{item.q}</h3>
-            </dt>
+            <dt className="text-lg font-semibold text-fg">{item.q}</dt>
             <dd className="mt-2 text-fg-muted">{item.a}</dd>
           </div>
         ))}
